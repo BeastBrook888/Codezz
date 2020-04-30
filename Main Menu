@@ -1,0 +1,79 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+
+public class Bee extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Bee frame = new Bee();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Bee() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 619, 369);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnScreen = new JButton("Screen 1");
+		btnScreen.setIcon(new ImageIcon(Bee.class.getResource("/bin/ye 17.png")));
+		btnScreen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnScreen.setBounds(113, 137, 89, 23);
+		contentPane.add(btnScreen);
+		
+		JButton button = new JButton("Screen 2");
+		button.setIcon(new ImageIcon(Bee.class.getResource("/bin/ye 17.png")));
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button.setBounds(398, 137, 89, 23);
+		contentPane.add(button);
+		
+		JButton button_1 = new JButton("Screen 3");
+		button_1.setIcon(new ImageIcon(Bee.class.getResource("/bin/ye 17.png")));
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button_1.setBounds(113, 241, 89, 23);
+		contentPane.add(button_1);
+		
+		JButton button_2 = new JButton("Screen 4");
+		button_2.setIcon(new ImageIcon(Bee.class.getResource("/bin/ye 17.png")));
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		button_2.setBounds(398, 241, 89, 23);
+		contentPane.add(button_2);
+	}
+}
